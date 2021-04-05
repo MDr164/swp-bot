@@ -22,7 +22,7 @@ func HelpMessage(vip bool) *discordgo.MessageEmbed {
 			"**!mypullrequests:** Shows the x3 status of youw own active puww wequests.\n" +
 			"**!myreviews:**  Shows aww puww wequests which you'we a weviewew of, nya.\n" +
 			"**!post <something>:** Weways youw text into the x3 bots *huggles tightly* channyew.\n" +
-			"++!uwu <something>:** NYAAA dis makeys text UwU.\n" +
+			"**!uwu <something>:** NYAAA dis makeys text UwU.\n" +
 			"**!about:** Some info *sweats* about this bot."
 		return MakeEmbed(title, body, nil, nil)
 	}
