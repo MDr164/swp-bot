@@ -17,10 +17,12 @@ const color = 4616416
 func HelpMessage(vip bool) *discordgo.MessageEmbed {
 	if vip {
 		title := "__These awe the x3 suppowted intewactive commands:__"
-		body := "**!allpullrequests:** Shows the UwU status of aww active puww wequests.\n" +
+		body := "**!help:** Shows this hewp *sweats* text.\n" +
+			"**!allpullrequests:** Shows the UwU status of aww active puww wequests.\n" +
 			"**!mypullrequests:** Shows the x3 status of youw own active puww wequests.\n" +
 			"**!myreviews:**  Shows aww puww wequests which you'we a weviewew of, nya.\n" +
 			"**!post <something>:** Weways youw text into the x3 bots *huggles tightly* channyew.\n" +
+			"++!uwu <something>:** NYAAA dis makeys text UwU.\n" +
 			"**!about:** Some info *sweats* about this bot."
 		return MakeEmbed(title, body, nil, nil)
 	}
@@ -30,6 +32,7 @@ func HelpMessage(vip bool) *discordgo.MessageEmbed {
 		"**!mypullrequests:** Shows the status of your own active pull requests.\n" +
 		"**!myreviews:** Shows all pull requests which you're a reviewer of.\n" +
 		"**!post <something>:** Relays your text into the bots channel.\n" +
+		"**!uwu <something>:** Same as post except it's not.\n" +
 		"**!about:** Some info about this bot."
 	return MakeEmbed(title, body, nil, nil)
 }
@@ -93,7 +96,7 @@ func ReviewTimer(session *discordgo.Session, event bitbucketserver.PullRequestOp
 				case r > 75:
 					_, err = session.ChannelMessageSend(cfg["PING_CHANNEL"], "https://tenor.com/view/nichijou-rain-disappointed-anime-gif-9762544")
 				}
-				_, err = session.ChannelMessageSend(cfg["PING_CHANNEL"], body)
+				_, err = session.ChannelMessageSend(cfg["PING_CHANNEL"], "48h have passed:\n"+body)
 			}
 		}
 	} else {

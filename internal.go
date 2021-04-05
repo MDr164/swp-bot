@@ -236,7 +236,7 @@ func UwuifyWords(message string) string {
 		}
 	}
 
-	return strings.Join(words, " ")
+	return strings.Join(words, "")
 }
 
 // uwuify ffe excwamation mawks
